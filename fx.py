@@ -1,4 +1,12 @@
 def fun1():
+
+    # This module contains the individual question functions for the quiz.
+    # Each function prints a question and takes input from the user, validating the answer.
+
+    # All functon funtion from fun1() to fun10() follow the same logic
+    #     1: Reads he answer
+    #     2: Validates the answer and returns a zero or one with respect to the answer if it is wrong or right
+    # NB:If an ivalid answer is entered it will be validated as a wrong answer
     print('''1.what is the meaning  of this symbol:
             ⠀⠀                          ⢀⡴⠁ ⣿⡏⠀⠱⣄
             ⠀⠀                      ⢀⣴⡟⠁⠀⠀⠀ ⣿⡇⠀⠀⠀⠙⣷⣄
