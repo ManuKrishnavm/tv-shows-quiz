@@ -1,10 +1,21 @@
+
+# Importing functions from the fx module that contain quiz logic
 from project_fun.fx import *
+
+# Introduction message for the quiz
 print("\n\nThis is a quiz to test your knowledge about fiction and televised shows consisting of 10 Quesions:\n")
 print('Rules:\n1.you will have 4 options to answer')
 print('2.Option ranging between (A,B,C,D) will only be acceptable ')
 print('3.Wrong option will be read as Wrong answering and will result in automatic skip')
+
+# Loop to start the quiz upon user confirmation
 while True:
+
+    # Asking if the user is ready to start the quiz
     any = str(input('if ready enter Yes or No(Y/N):'))
+
+    # Each function (fun1 to fun10) corresponds to a question in the quiz.
+    # The result of the question is added to a list (1 for correct, 0 for wrong).
     if (any == 'y') or (any == 'Y'):
 
         counter = 0
@@ -85,10 +96,14 @@ while True:
             lst.append(0)
 
 
-
+        # After the quiz, user can choose to edit any answer
         while(True):
+
+            # User selects the question number they wish to edit
             edit = str(input('do yu want to edit any ansers(Y/N):'))
             if (edit == 'y') or (edit == 'Y'):
+
+                # Additional logic for editing other questions
                 lol = int(input('Which question do you want to edit:'))
                 if (lol == 1):
                     a1 = fun1()
@@ -150,9 +165,10 @@ while True:
                         lst[9] = 1
                     else:
                         pass
+            # If the user doesn't want to edit answers, calculate the score
             elif (edit == 'N') or (edit == 'n'):
                 break
-        print('the quiz has been ended\n\n\n\n\n')
+        print('the quiz has been ended\n\n\n\n\n\n\n\n\n\n\n')
         print('________________RESULS________________\n'
               '+------------------------------------+')
         for i in lst:
